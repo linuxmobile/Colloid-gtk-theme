@@ -212,17 +212,18 @@ make_assets() {
           theme_color_dark='#3c3836'
           theme_color_light='#a89984'
           ;;
-      esac 
+      esac
   fi
 
   if [[ "$blackness" == 'true' ]]; then
     case "$scheme" in
       '')
-        background_light='#FFFFFF'
-        background_dark='#0F0F0F'
-        background_dark_alt='#121212'
-        titlebar_light='#F2F2F2'
-        titlebar_dark='#030303'
+        background_light='rgba(255, 255, 255, 0.5)'
+        background_dark='rgba(15, 15, 15, 0.5)'
+        background_darker='rgba(18, 18, 18, 0.5)'
+        background_alt='rgba(33, 33, 33, 0.5)'
+        titlebar_light='rgba(242, 242, 242, 0.5)'
+        titlebar_dark='rgba(3, 3, 3, 0.5)'
         ;;
       -Nord)
         background_light='#f8fafc'
@@ -259,7 +260,7 @@ make_assets() {
         background_light='#ffffff'
         background_dark='#2c2c2c'
         background_dark_alt='#3c3c3c'
-        titlebar_light='#f2f2f2'
+        titlebar_light='rgba(242, 242, 242, 0.5)'
         titlebar_dark='#242424'
         ;;
       -Nord)
@@ -324,9 +325,9 @@ make_assets() {
     sed -i "s/#5b9bf8/${theme_color_light}/g"                                   "${THEME_DIR}/"{gtk-3.0,gtk-4.0}/thumbnail.png
   else
     sed -i "s/#ffffff/${background_light}/g"                                    "${THEME_DIR}/cinnamon/thumbnail.png"
-    sed -i "s/#f2f2f2/${titlebar_light}/g"                                      "${THEME_DIR}/cinnamon/thumbnail.png"
+    sed -i "s/rgba(242, 242, 242, 0.5)/${titlebar_light}/g"                                      "${THEME_DIR}/cinnamon/thumbnail.png"
     sed -i "s/#3c84f7/${theme_color_dark}/g"                                    "${THEME_DIR}/cinnamon/thumbnail.png"
-    sed -i "s/#f2f2f2/${titlebar_light}/g"                                      "${THEME_DIR}/"{gtk-3.0,gtk-4.0}/thumbnail.png
+    sed -i "s/rgba(242, 242, 242, 0.5)/${titlebar_light}/g"                                      "${THEME_DIR}/"{gtk-3.0,gtk-4.0}/thumbnail.png
     sed -i "s/#3c84f7/${theme_color_dark}/g"                                    "${THEME_DIR}/"{gtk-3.0,gtk-4.0}/thumbnail.png
   fi
 

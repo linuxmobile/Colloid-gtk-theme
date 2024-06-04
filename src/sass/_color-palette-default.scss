@@ -34,7 +34,7 @@ $orange-dark: #FF7043;
 
 // Grey
 $grey-050: #FAFAFA;
-$grey-100: #F2F2F2;
+$grey-100: rgba(242, 242, 242, 0.5);
 $grey-150: #EEEEEE;
 $grey-200: #DDDDDD;
 $grey-250: #CCCCCC;
@@ -48,16 +48,16 @@ $grey-600: #464646;
 $grey-650: #3C3C3C;
 $grey-700: #2C2C2C;
 $grey-750: #242424;
-$grey-800: #212121;
-$grey-850: #121212;
-$grey-900: #0F0F0F;
-$grey-950: #030303;
+$grey-800: rgba(33, 33, 33, 0.5);
+$grey-850: rgba(18, 18, 18, 0.5);
+$grey-900: rgba(15, 15, 15, 0.5);
+$grey-950: rgba(3, 3, 3, 0.5);
 
 // White
-$white: #FFFFFF;
+$white: rgba(255, 255, 255, 0.5);
 
 // Black
-$black: #000000;
+$black: rgba(0, 0, 0, 0.5);
 
 // Button
 $button-close: #fd5f51;
