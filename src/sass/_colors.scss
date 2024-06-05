@@ -82,18 +82,18 @@
 }
 
 @function background($type) {
-  @if ($type == 'a') { @return $white; }
-  @if ($type == 'b') { @return $grey-050; }
-  @if ($type == 'c') { @return $grey-100; }
-  @if ($type == 'd') { @return $grey-250; }
+  @if ($type == 'a') { @return rgba($white, 0.5); }
+  @if ($type == 'b') { @return rgba($grey-050, 0.5); }
+  @if ($type == 'c') { @return rgba($grey-100, 0.5); }
+  @if ($type == 'd') { @return rgba($grey-250, 0.5); }
 
   @if ($blackness == 'true') {
-    @if ($type == 'e') { @return $black; }
-    @if ($type == 'f') { @return $grey-950; }
-    @if ($type == 'g') { @return $grey-900; }
-    @if ($type == 'h') { @return $grey-850; }
+    @if ($type == 'e') { @return rgba($black, 0.5); }
+    @if ($type == 'f') { @return rgba($grey-950, 0.5); }
+    @if ($type == 'g') { @return rgba($grey-900, 0.5); }
+    @if ($type == 'h') { @return rgba($grey-850, 0.5); }
   } @else {
-    @if ($type == 'e') { @return $grey-800; }
+    @if ($type == 'e') { @return rgba($grey-800, 0.5); }
     @if ($type == 'f') { @return $grey-750; }
     @if ($type == 'g') { @return $grey-700; }
     @if ($type == 'h') { @return $grey-650; }
