@@ -710,6 +710,30 @@ uninstall_theme() {
   done
 }
 
+<<<<<<< HEAD
+||||||| parent of e3e3910b (Update install.sh)
+clean_theme() {
+  if [[ "$UID" -eq "$ROOT_UID" ]]; then
+    uninstall_theme
+  else
+    local DEST_DIR="$HOME/.themes"
+    uninstall_theme
+    local DEST_DIR="$HOME/.local/share/themes"
+    uninstall_theme
+  fi
+}
+
+=======
+clean_theme() {
+  if [[ "$UID" != "$ROOT_UID" ]]; then
+#    local DEST_DIR="$HOME/.themes"
+#    uninstall_theme
+    local DEST_DIR="$HOME/.local/share/themes"
+    uninstall_theme
+  fi
+}
+
+>>>>>>> e3e3910b (Update install.sh)
 if [[ "$uninstall" == 'true' ]]; then
   if [[ "$libadwaita" == 'true' ]]; then
     echo -e "\nUninstall libadwaita theme from ${HOME}/.config/gtk-4.0 ..."
