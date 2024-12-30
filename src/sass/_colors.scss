@@ -303,7 +303,6 @@ $destructive: $error;
 
 $assets-color: $primary;
 
-<<<<<<< HEAD
 @if $colorscheme == "dracula" {
   $assets-color: if($variant == "light", $green-dark, $green-light);
 }
@@ -318,25 +317,16 @@ $solid-border: if(
   mix(white, $base, 12%)
 );
 $border-alt: rgba($black, 0.16); // darker border color for Chrome and Firefox
-||||||| parent of 236b905a (Fixed #189)
-@if $colorscheme == 'dracula' {
-  $assets-color:                        if($variant == 'light', $green-dark, $green-light);
-}
-
-$frame:                                 if($variant == 'light', rgba($black, 0.12), rgba($black, 0.25));
-$border:                                if($variant == 'light', rgba($black, 0.12), rgba($white, 0.12));
-$shade:                                 if($variant == 'light', rgba($black, 0.08), rgba($white, 0.08));
-$window-border:                         if($variant == 'light', rgba($black, 0.12), rgba($black, 0.75));
-$solid-border:                          if($variant == 'light', mix(black, $base, 12%), mix(white, $base, 12%));
-$border-alt:                            rgba($black, 0.16); // darker border color for Chrome and Firefox
-=======
-$frame:                                 if($variant == 'light', rgba($black, 0.12), rgba($black, 0.25));
-$border:                                if($variant == 'light', rgba($black, 0.12), rgba($white, 0.12));
-$shade:                                 if($variant == 'light', rgba($black, 0.08), rgba($white, 0.08));
-$window-border:                         if($variant == 'light', rgba($black, 0.12), rgba($black, 0.75));
-$solid-border:                          if($variant == 'light', mix(black, $base, 12%), mix(white, $base, 12%));
-$border-alt:                            rgba($black, 0.16); // darker border color for Chrome and Firefox
->>>>>>> 236b905a (Fixed #189)
+$frame: if($variant == "light", rgba($black, 0.12), rgba($black, 0.25));
+$border: if($variant == "light", rgba($black, 0.12), rgba($white, 0.12));
+$shade: if($variant == "light", rgba($black, 0.08), rgba($white, 0.08));
+$window-border: if($variant == "light", rgba($black, 0.12), rgba($black, 0.75));
+$solid-border: if(
+  $variant == "light",
+  mix(black, $base, 12%),
+  mix(white, $base, 12%)
+);
+$border-alt: rgba($black, 0.16); // darker border color for Chrome and Firefox
 
 //
 // Overlay state colors

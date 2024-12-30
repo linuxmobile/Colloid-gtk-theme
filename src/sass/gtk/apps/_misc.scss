@@ -8,20 +8,32 @@ overlay > revealer {
     box-shadow: $shadow-z16;
   }
 
-  &.left > scrolledwindow.frame { margin-right: 32px; }
+  &.left > scrolledwindow.frame {
+    margin-right: 32px;
+  }
 
-  &.right > scrolledwindow.frame { margin-left: 32px; }
+  &.right > scrolledwindow.frame {
+    margin-left: 32px;
+  }
 }
 
 .terminix-session-sidebar, // for backward compatibility
-.tilix-session-sidebar { background-image: image($surface); }
+.tilix-session-sidebar {
+  background-image: image($surface);
+}
 
-.terminal-titlebar button { border-radius: 0; }
+.terminal-titlebar button {
+  border-radius: 0;
+}
 
-button.image-button.session-new-button { min-width: $medium-size - 4px; }
+button.image-button.session-new-button {
+  min-width: $medium-size - 4px;
+}
 
 // Remove extra padding
-notebook.tilix-background tab > box > stack { margin: -6px; }
+notebook.tilix-background tab > box > stack {
+  margin: -6px;
+}
 
 button.flat.tilix-small-button {
   // NOTE: padding is hard-coded with:
@@ -30,17 +42,19 @@ button.flat.tilix-small-button {
   min-width: $small-size - 4px * 2;
 }
 
-
 /**************
  * Terminator *
  **************/
 .terminator-terminal-window {
-  paned > separator { background-color: $background; }
+  paned > separator {
+    background-color: $background;
+  }
 
   // this should be fixed by the upstream
-  notebook.frame { border-style: none; }
+  notebook.frame {
+    border-style: none;
+  }
 }
-
 
 /*************
  * Ubitquity *
@@ -54,7 +68,8 @@ button.flat.tilix-small-button {
  * Meld *
  ********/
 .meld-notebook {
-  &, > stack {
+  &,
+  > stack {
     background: none;
     border-radius: 0 0 $window-radius $window-radius;
   }
@@ -69,7 +84,6 @@ statusbar.meld-status-bar {
   background: none;
 }
 
-
 /***********
  * Eclipse *
  ***********/
@@ -77,11 +91,14 @@ window.background > box.vertical > scrolledwindow > widget toolbar {
   padding: 2px;
 
   separator,
-  button { margin: 2px; }
+  button {
+    margin: 2px;
+  }
 
-  button { border-radius: $corner-radius; }
+  button {
+    border-radius: $corner-radius;
+  }
 }
-
 
 /************
  * Chromium *
@@ -95,27 +112,39 @@ window.background.chromium {
   // toolbar's border-bottom refers to button's border
   // FIXME: Chrome's button border ignores theme's alpha value :(
   entry,
-  > button { border: 1px solid $solid-border; }
+  > button {
+    border: 1px solid $solid-border;
+  }
 
   > button {
     color: $primary;
 
-    &:disabled { color: $text-secondary-disabled; }
+    &:disabled {
+      color: $text-secondary-disabled;
+    }
   }
 
   menubar,
-  headerbar { color: $titlebar-text-secondary; }
+  headerbar {
+    color: $titlebar-text-secondary;
+  }
 
   headerbar.titlebar {
     padding: 0 $space-size * 2;
 
-    button:active { background-color: $overlay-active; } // Workaround for non-animatable buttons in headerbar
+    button:active {
+      background-color: $overlay-active;
+    } // Workaround for non-animatable buttons in headerbar
   }
 
-  spinner { color: $primary; }
+  spinner {
+    color: $primary;
+  }
 
   // For text field
-  textview.view { background-color: transparent; }
+  textview.view {
+    background-color: transparent;
+  }
 
   // For prominent button, starred icon, etc.
   treeview.view.cell:selected:focus {
@@ -131,30 +160,29 @@ window.background.chromium {
   }
 
   menu {
-    border-color: if($variant == 'light', darken($background, 20%), lighten($background, 16%));
+    border-color: if(
+      $variant == "light",
+      darken($background, 20%),
+      lighten($background, 16%)
+    );
 
-    menuitem { border-radius: 0; }
+    menuitem {
+      border-radius: 0;
+    }
   }
 }
 
-tooltip.background.chromium { background-color: rgba($tooltip, 1); }
+tooltip.background.chromium {
+  background-color: rgba($tooltip, 1);
+}
 
-
-<<<<<<< HEAD
-/***********
- * Firefox *
- ***********/
-||||||| parent of b63b2877 (update)
-//
-// Firefox *
-//
-=======
 //
 // Firefox
 //
->>>>>>> b63b2877 (update)
 #MozillaGtkWidget {
-  decoration { border: none; }
+  decoration {
+    border: none;
+  }
 
   &.background headerbar.titlebar.default-decoration button.titlebutton {
     @extend %firefox_window_button;
@@ -162,7 +190,9 @@ tooltip.background.chromium { background-color: rgba($tooltip, 1); }
 
   > widget {
     // For popover, entry in toolbar, etc.
-    text { background-color: $surface; }
+    text {
+      background-color: $surface;
+    }
 
     // For selection, active tab indicator, etc.
     text:selected {
@@ -172,13 +202,19 @@ tooltip.background.chromium { background-color: rgba($tooltip, 1); }
     }
 
     // For separators in bookmark toolbar
-    > separator { color: $solid-border; }
+    > separator {
+      color: $solid-border;
+    }
 
     // avoid black border
-    > scrollbar { background-clip: border-box; }
+    > scrollbar {
+      background-clip: border-box;
+    }
 
     // Emphasize toolbar's border-bottom
-    > frame > border { border-color: $solid-border; }
+    > frame > border {
+      border-color: $solid-border;
+    }
 
     > entry,
     > button > button {
@@ -186,7 +222,9 @@ tooltip.background.chromium { background-color: rgba($tooltip, 1); }
       border-radius: $corner-radius;
       box-shadow: none;
 
-      &:disabled { border-color: $track-disabled; }
+      &:disabled {
+        border-color: $track-disabled;
+      }
     }
 
     > entry {
@@ -198,22 +236,32 @@ tooltip.background.chromium { background-color: rgba($tooltip, 1); }
         box-shadow: inset 0 0 0 1px $primary;
       }
 
-      &:disabled { background-color: $base-alt; }
+      &:disabled {
+        background-color: $base-alt;
+      }
     }
 
     > button > button {
       padding: 4px 8px;
       background-size: auto;
 
-      &:hover { box-shadow: inset 0 0 0 9999px $overlay-hover; }
+      &:hover {
+        box-shadow: inset 0 0 0 9999px $overlay-hover;
+      }
 
-      &:active { background-image: image($overlay-active); }
+      &:active {
+        background-image: image($overlay-active);
+      }
     }
 
     // use 16px assets for hard-coded sizing
-    > checkbutton > check { @extend %small_check; }
+    > checkbutton > check {
+      @extend %small_check;
+    }
 
-    > radiobutton > radio { @extend %small_radio; }
+    > radiobutton > radio {
+      @extend %small_radio;
+    }
 
     > checkbutton > check,
     > radiobutton > radio {
@@ -226,14 +274,21 @@ tooltip.background.chromium { background-color: rgba($tooltip, 1); }
     > radiobutton > radio:not(:checked):not(:indeterminate) {
       color: $grey-600;
 
-      &:hover, &:active { color: $grey-500; }
+      &:hover,
+      &:active {
+        color: $grey-500;
+      }
 
-      &:disabled { color: rgba($grey-600, 0.5); }
+      &:disabled {
+        color: rgba($grey-600, 0.5);
+      }
     }
   }
 
   // remove ugly border around the menus
-  menu { border: none; }
+  menu {
+    border: none;
+  }
 }
 
 // for backward compatibility
@@ -242,15 +297,23 @@ tooltip.background.chromium { background-color: rgba($tooltip, 1); }
     > menubar {
       color: $titlebar-text-secondary;
 
-      &:hover { color: $titlebar-text; }
+      &:hover {
+        color: $titlebar-text;
+      }
 
-      &:disabled { color: $titlebar-text-secondary-disabled; }
+      &:disabled {
+        color: $titlebar-text-secondary-disabled;
+      }
     }
 
-    > frame { color: $solid-border; }
+    > frame {
+      color: $solid-border;
+    }
   }
 
-  menu > separator { color: $solid-border; }
+  menu > separator {
+    color: $solid-border;
+  }
 }
 
 //
@@ -265,29 +328,24 @@ window.background:not(.csd) {
   }
 }
 
-<<<<<<< HEAD
-/************
- * Inkscape *
- ************/
-||||||| parent of b63b2877 (update)
-//
-// Inkscape *
-//
-
-=======
 //
 // Inkscape
 //
 
->>>>>>> b63b2877 (update)
 #ToolboxCommon {
   > #AuxToolbox {
-    #StyleSwatch { font-size: smaller; }
+    #StyleSwatch {
+      font-size: smaller;
+    }
 
-    #Kludge { padding: 0; }
+    #Kludge {
+      padding: 0;
+    }
 
     spinbutton,
-    entry { min-height: 32px; }
+    entry {
+      min-height: 32px;
+    }
 
     button:not(.up):not(.down) {
       min-height: 24px;
@@ -296,7 +354,9 @@ window.background:not(.csd) {
       // border-radius: $corner-radius;
     }
 
-    spinbutton button { border-width: 4px; }
+    spinbutton button {
+      border-width: 4px;
+    }
   }
 
   > toolbar.vertical {
@@ -330,17 +390,25 @@ window.background:not(.csd) {
     padding: 0;
   }
 
-  #HorizontalScrollbar { border-top: 1px solid $divider; }
+  #HorizontalScrollbar {
+    border-top: 1px solid $divider;
+  }
 
   #VerticalScrollbar {
-    &:dir(ltr) { border-left: 1px solid $divider; }
+    &:dir(ltr) {
+      border-left: 1px solid $divider;
+    }
 
-    &:dir(rtl) { border-right: 1px solid $divider; }
+    &:dir(rtl) {
+      border-right: 1px solid $divider;
+    }
   }
 }
 
 #Canvas_and_Dock {
-  frame > border { border: none; }
+  frame > border {
+    border: none;
+  }
 
   // each canvases' titlebar
   widget > widget {
@@ -350,7 +418,9 @@ window.background:not(.csd) {
       padding: 4px;
     }
 
-    > box.horizontal image { padding: 4px; }
+    > box.horizontal image {
+      padding: 4px;
+    }
   }
 
   // vertical dock buttons
@@ -364,67 +434,48 @@ window.background:not(.csd) {
 scrolledwindow#DialogNotebook {
   > viewport.frame > notebook.frame {
     button.close-button {
-      image { padding: 4px; }
+      image {
+        padding: 4px;
+      }
     }
   }
 }
 
-
-<<<<<<< HEAD
-/***********
- * Synapse *
- ***********/
-||||||| parent of b63b2877 (update)
-//
-// Synapse *
-//
-=======
 //
 // Synapse
 //
->>>>>>> b63b2877 (update)
-box.vertical > widget > widget:selected { @extend %selected_items; }
+box.vertical > widget > widget:selected {
+  @extend %selected_items;
+}
 
-
-<<<<<<< HEAD
-/***************
- * Libreoffice *
- ***************/
-||||||| parent of b63b2877 (update)
-//
-// Libreoffice *
-//
-=======
 //
 // Libreoffice
 //
->>>>>>> b63b2877 (update)
 window.background {
-  > grid > widget > widget > scrolledwindow > viewport > grid > box > box > frame > box {
+  > grid
+    > widget
+    > widget
+    > scrolledwindow
+    > viewport
+    > grid
+    > box
+    > box
+    > frame
+    > box {
     background-color: $base;
   }
 }
 
-
-<<<<<<< HEAD
-/*********
- * Pamac *
- *********/
-||||||| parent of b63b2877 (update)
-//
-// Pamac *
-//
-=======
 //
 // Pamac
 //
->>>>>>> b63b2877 (update)
 window.background.csd {
   > box.vertical > overlay > stack > box.vertical > box.horizontal {
     > revealer > stack {
       &, // Search left side
       > scrolledwindow > viewport.frame, // Installed left side
-      > box.vertical > stack > scrolledwindow > viewport.frame { // Browse left side
+      > box.vertical > stack > scrolledwindow > viewport.frame {
+        // Browse left side
         > list {
           border: none;
           border-radius: 0;
@@ -437,26 +488,14 @@ window.background.csd {
     }
   }
 }
-<<<<<<< HEAD
-||||||| parent of b63b2877 (update)
 
 //
 // KiCad / SLADE
 //
 
 window.background:not(.csd):not(.solid-csd) {
-  > button:not(:hover):not(:active):not(:checked):not(:disabled):not(.flat) { // Why this ?
-    background-color: $base-alt;
-  }
-}
-=======
-
-//
-// KiCad / SLADE
-//
-
-window.background:not(.csd):not(.solid-csd) {
-  > button:not(:hover):not(:active):not(:checked):not(:disabled):not(.flat) { // Why this ?
+  > button:not(:hover):not(:active):not(:checked):not(:disabled):not(.flat) {
+    // Why this ?
     background-color: $base-alt;
   }
 }
@@ -466,10 +505,21 @@ window.background:not(.csd):not(.solid-csd) {
 //
 
 window.background:not(.csd) {
-  > box > widget > widget > widget > widget > widget > widget > widget > scrolledwindow {
+  > box
+    > widget
+    > widget
+    > widget
+    > widget
+    > widget
+    > widget
+    > widget
+    > scrolledwindow {
     entry:focus {
-      background-color: if($variant == 'light', mix(black, $background, 5%), mix(white, $background, 5%));
+      background-color: if(
+        $variant == "light",
+        mix(black, $background, 5%),
+        mix(white, $background, 5%)
+      );
     }
   }
 }
->>>>>>> b63b2877 (update)

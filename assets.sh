@@ -175,46 +175,6 @@ make_assets() {
   fi
 
   if [[ "$scheme" == '-Everforest' ]]; then
-<<<<<<< HEAD
-      case "$theme" in
-        '')
-          theme_color_dark='#458588'
-          theme_color_light='#83a598'
-          ;;
-        -Purple)
-          theme_color_dark='#ab62b1'
-          theme_color_light='#d386cd'
-          ;;
-        -Pink)
-          theme_color_dark='#b16286'
-          theme_color_light='#d3869b'
-          ;;
-        -Red)
-          theme_color_dark='#cc241d'
-          theme_color_light='#fb4934'
-          ;;
-        -Orange)
-          theme_color_dark='#d65d0e'
-          theme_color_light='#fe8019'
-          ;;
-        -Yellow)
-          theme_color_dark='#d79921'
-          theme_color_light='#fabd2f'
-          ;;
-        -Green)
-          theme_color_dark='#98971a'
-          theme_color_light='#b8bb26'
-          ;;
-        -Teal)
-          theme_color_dark='#689d6a'
-          theme_color_light='#8ec07c'
-          ;;
-        -Grey)
-          theme_color_dark='#3c3836'
-          theme_color_light='#a89984'
-          ;;
-      esac
-||||||| parent of 9ffb38b5 (Fixed #167)
       case "$theme" in
         '')
           theme_color_dark='#458588'
@@ -253,7 +213,6 @@ make_assets() {
           theme_color_light='#a89984'
           ;;
       esac 
-=======
     case "$theme" in
       '')
         theme_color_dark='#3a94c5'
