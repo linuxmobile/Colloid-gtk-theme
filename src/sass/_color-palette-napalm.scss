@@ -1,0 +1,72 @@
+// Napalm Theme Color Palette
+
+// Red
+$red-light: #FF0039;
+$red-dark: #FF205A;
+
+// Pink
+$pink-light: #FF0039;
+$pink-dark: #FF205A;
+
+// Purple
+$purple-light: #FB51F0;
+$purple-dark: #C573EB;
+
+// Blue
+$blue-light: #009FFF;
+$blue-dark: #6795FF;
+
+// Teal
+$teal-light: #00E7E0;
+$teal-dark: #5FD8FF;
+
+// Green
+$green-light: #00C300;
+$green-dark: #ACEA6E;
+
+// Yellow
+$yellow-light: #E5B400;
+$yellow-dark: #FFC046;
+
+// Orange
+$orange-light: #E5B400;
+$orange-dark: #FFC046;
+
+// Grey
+$grey-050: #D4D4D4;
+$grey-100: #D4D4D4;
+$grey-150: #D4D4D4;
+$grey-200: #D4D4D4;
+$grey-250: #D4D4D4;
+$grey-300: #D4D4D4;
+$grey-350: #D4D4D4;
+$grey-400: #D4D4D4;
+$grey-450: #D4D4D4;
+$grey-500: #D4D4D4;
+$grey-550: #D4D4D4;
+$grey-600: #D4D4D4;
+$grey-650: #30363d;
+$grey-700: #21262d;
+$grey-750: #161b22;
+$grey-800: #090c10;
+$grey-850: #0d1117;
+$grey-900: #0d1117;
+$grey-950: #0d1117;
+
+// White
+$white: #D4D4D4;
+
+// Black
+$black: #0d1117;
+
+// Button
+$button-close: if($variant == 'light', $red-dark, $red-light);
+$button-max: if($variant == 'light', $green-dark, $green-light);
+$button-min: if($variant == 'light', $yellow-dark, $yellow-light);
+
+// Link
+$links: if($variant == 'light', #569CD6, #569CD6);
+
+// Theme
+$default-light: $blue-light;
+$default-dark: $blue-dark;

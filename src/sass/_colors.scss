@@ -164,34 +164,34 @@
 
 @function background($type) {
   @if ($type == "a") {
-    @return rgba($white, 0.3);
+    @return $white;
   }
   @if ($type == "b") {
-    @return rgba($grey-050, 0.3);
+    @return $grey-050;
   }
   @if ($type == "c") {
-    @return rgba($grey-100, 0.3);
+    @return $grey-100;
   }
   @if ($type == "d") {
-    @return rgba($grey-250, 0.3);
+    @return $grey-250;
   }
 
   @if ($blackness == "true") {
     @if ($type == "e") {
-      @return rgba($black, 0.5);
+      @return $black;
     }
     @if ($type == "f") {
-      @return rgba($grey-950, 0.5);
+      @return $grey-950;
     }
     @if ($type == "g") {
-      @return rgba($grey-900, 0.5);
+      @return $grey-900;
     }
     @if ($type == "h") {
-      @return rgba($grey-850, 0.5);
+      @return $grey-850;
     }
   } @else {
     @if ($type == "e") {
-      @return rgba($grey-800, 0.5);
+      @return $grey-800;
     }
     @if ($type == "f") {
       @return $grey-750;
